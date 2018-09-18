@@ -81,3 +81,117 @@
   position: absolute !important
   width: 1px !important
 +comment("home page style")
+
+
++comment("section sv-service styles")
+
+.btn
+  &--link
+    padding: 0
+    font: 600 14px/24px $main-font
+    color: #E51414
+    text-transform: uppercase
+    text-decoration: underline
+    transition: color .3s ease-out
+    &:hover
+      color: #E51414
+      text-decoration: none
+    &:focus
+      color: #FFD500
+    &:active
+      color: #E51414 * 1.4
+      box-shadow: none
+
+
+.sv-service
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 
+      left: -15px
+      right: -15px
+    justify-content: space-around
+    +r($sm)
+      justify-content: flex-start
+      align-items: stretch
+  &__col
+    position: relative
+    width: 100%
+    min-height: 1px
+    margin-bottom: 30px
+    padding:
+      left: 15px
+      right: 15px
+    +r($sm)
+      +col(12)
+    +r($lg)
+      +col(8)
+  &__card
+    +r($sm)
+      height: 100%
+  
+.sv-card
+  display: flex
+  flex-direction: column
+  border: 1px solid #e6e3da
+  background-color: #fff
+  &__figure
+    margin-bottom: 22px
+  &__caption
+    flex-grow: 1
+    flex-basis: 0
+    padding: 15px
+  &__figcaption
+    display: block
+    padding: 10px 5px
+    background-color: #ff1b0d
+    box-shadow: 5px 0 0 #ffcb00 inset
+    font: 400 16px/1 "Roboto", sans-serif
+    color: #fff
+    text-align: center
+  &__header
+    margin-bottom: 30px
+  &__content
+    margin-bottom: 30px
+  &__link
+    display: inline-block
+    vertical-align: top
+    font: 500 20px/24px Roboto, sans-serif
+    color: #2e3233
+    text-decoration: none
+    transition: color .3s ease-out
+    &:hover
+      color: #E51414
+      text-decoration: none
+    &:focus
+      text-decoration: underline
+    &:active
+      color: #E51414 * 1.4
+  &__content
+    p
+      @extend .sv-text
+    ul
+      padding-left: 0
+      list-style-type: none
+      &>li
+        font: 400 14px/24px $main-font
+        color: #000
+        letter-spacing: 0.3px
+  &__footer
+    position: static
+    padding: 0
+    background: transparent
+    width: auto
+
+.sv-gallery
+  margin-bottom: 0
+.img-fluid
+  max-width: 100%
+  height: auto
+.sv-heading
+.sv-text
+  margin: 0 0 10px
+  padding: 0
+  font: 400 14px/24px $main-font
+  color: #000
+  letter-spacing: 0.3px
